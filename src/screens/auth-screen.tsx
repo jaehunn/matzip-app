@@ -12,7 +12,7 @@ import {
   AUTH_NAVIGATIONS,
   AuthStackParamList,
 } from '../navigations/auth-stack-navigator';
-import CustomButton from '../components/button';
+import {CustomButton} from '../components/custom-button';
 
 interface AuthScreenProps
   extends StackScreenProps<

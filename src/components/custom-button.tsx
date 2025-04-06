@@ -20,7 +20,7 @@ interface CustomButtonProps extends PressableProps {
 /** @see https://reactnative.dev/docs/dimensions */
 const deviceHeight = Dimensions.get('screen').height;
 
-function CustomButton({
+export function CustomButton({
   label,
   variant = 'filled',
   size = 'large',
@@ -93,5 +93,3 @@ const styles = StyleSheet.create({
     color: colors.PINK_700,
   },
 });
-
-export default CustomButton;
