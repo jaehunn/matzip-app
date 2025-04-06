@@ -20,7 +20,11 @@ function AuthScreen({navigation}: AuthScreenProps) {
       <View>
         <Button
           title="Login"
-          onPress={() => navigation.navigate(AUTH_NAVIGATIONS.AUTH_SCREEN)}
+          onPress={() => navigation.navigate(AUTH_NAVIGATIONS.LOGIN_SCREEN)}
+        />
+        <Button
+          title="Signup"
+          onPress={() => navigation.navigate(AUTH_NAVIGATIONS.SIGNUP_SCREEN)}
         />
       </View>
     </SafeAreaView>
