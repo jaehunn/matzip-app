@@ -6,10 +6,14 @@
  */
 
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 function App(): React.JSX.Element {
-  return <View>{/* ... */}</View>;
+  return (
+    <View>
+      <Text>Hello World</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
