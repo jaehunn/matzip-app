@@ -3,6 +3,9 @@ import {SafeAreaView, StyleSheet, Text, TextInput, View} from 'react-native';
 import {InputText} from '../components/input-text';
 import {useForm} from '../hooks/useForm';
 import {CustomButton} from '../components/custom-button';
+import {useAuth} from '../hooks/useAuth';
+import {AUTH_NAVIGATIONS} from '../navigations/auth-stack-navigator';
+import {useNavigation} from '@react-navigation/native';
 
 type UserInfomation = {
   email: string;
@@ -39,8 +42,20 @@ function SignupScreen() {
     validate: validateSignup,
   });
 
+  const {signupMutation, loginMutation} = useAuth();
+
   const handleSubmit = () => {
-    console.log(signup.values);
+    signupMutation.mutate(signup.values, {
+      onSuccess: () => {
+        // omit passwordConfirm
+        const payload = {
+          email: signup.values.email,
+          password: signup.values.password,
+        };
+
+        loginMutation.mutate(payload);
+      },
+    });
   };
 
   return (

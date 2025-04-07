@@ -3,6 +3,7 @@ import {SafeAreaView, StyleSheet, TextInput, View} from 'react-native';
 import {InputText} from '../components/input-text';
 import {CustomButton} from '../components/custom-button';
 import {useForm} from '../hooks/useForm';
+import {useAuth} from '../hooks/useAuth';
 
 type UserInfomation = {
   email: string;
@@ -32,8 +33,10 @@ function LoginScreen() {
     validate: validateLogin,
   });
 
+  const {loginMutation} = useAuth();
+
   const handleSubmit = () => {
-    console.log('login.values', login.values);
+    loginMutation.mutate(login.values);
   };
 
   return (
@@ -58,12 +61,7 @@ function LoginScreen() {
           {...login.getTextInputProps('password')}
         />
       </View>
-      <CustomButton
-        label="로그인"
-        variant="filled"
-        size="large"
-        onPress={handleSubmit}
-      />
+      <CustomButton label="로그인" variant="filled" size="large" onPress={handleSubmit} />
     </SafeAreaView>
   );
 }

@@ -1,10 +1,9 @@
-import {Fragment} from 'react';
 import AuthStackNavigator from './auth-stack-navigator';
 import MainDrawerNavigator from './main-drawer-nativator';
+import {useAuth} from '../hooks/useAuth';
 
 function RootNavigator() {
-  // TODO: Authenticationw
-  let isAuthenticated = false;
+  const {isAuthenticated} = useAuth();
 
   if (!isAuthenticated) {
     return <AuthStackNavigator />;
