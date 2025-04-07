@@ -1,5 +1,5 @@
 import {useQuery} from '@tanstack/react-query';
-import {getAccessToken} from '../apis/get-access-token';
+import {getAccessToken} from '@/apis/get-access-token';
 import {QUERY_KEYS} from './querykeys';
 
 const ACCESS_TOKEN_EXPIRE_TIME = 30 * 60 * 1000; // 30 minutes

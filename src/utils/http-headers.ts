@@ -1,4 +1,4 @@
-import {http} from '../apis/http';
+import {http} from '@/apis/http';
 
 export const HTTP_HEADERS = {
   AUTHORIZATION: 'Authorization',

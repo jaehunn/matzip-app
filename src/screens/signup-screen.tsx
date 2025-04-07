@@ -1,10 +1,10 @@
 import React, {useRef} from 'react';
 import {SafeAreaView, StyleSheet, Text, TextInput, View} from 'react-native';
-import {InputText} from '../components/input-text';
-import {useForm} from '../hooks/useForm';
-import {CustomButton} from '../components/custom-button';
-import {useAuth} from '../hooks/useAuth';
-import {AUTH_NAVIGATIONS} from '../navigations/auth-stack-navigator';
+import {InputText} from '@/components/input-text';
+import {useForm} from '@/hooks/useForm';
+import {CustomButton} from '@/components/custom-button';
+import {useAuth} from '@/hooks/useAuth';
+import {AUTH_NAVIGATIONS} from '@/navigations/auth-stack-navigator';
 import {useNavigation} from '@react-navigation/native';
 
 type UserInfomation = {

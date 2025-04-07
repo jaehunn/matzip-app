@@ -1,9 +1,9 @@
 import React, {useRef} from 'react';
 import {SafeAreaView, StyleSheet, TextInput, View} from 'react-native';
-import {InputText} from '../components/input-text';
-import {CustomButton} from '../components/custom-button';
-import {useForm} from '../hooks/useForm';
-import {useAuth} from '../hooks/useAuth';
+import {InputText} from '@/components/input-text';
+import {CustomButton} from '@/components/custom-button';
+import {useForm} from '@/hooks/useForm';
+import {useAuth} from '@/hooks/useAuth';
 
 type UserInfomation = {
   email: string;

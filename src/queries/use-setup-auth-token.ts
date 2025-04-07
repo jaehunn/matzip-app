@@ -1,6 +1,6 @@
-import {deleteHttpHeaders, HTTP_HEADERS, setHttpHeaders} from '../utils/http-headers';
+import {deleteHttpHeaders, HTTP_HEADERS, setHttpHeaders} from '@/utils/http-headers';
 import {useEffect} from 'react';
-import {resetKeychain, setKeychain, STORAGE_KEYS} from '../utils/storage';
+import {resetKeychain, setKeychain, STORAGE_KEYS} from '@/utils/storage';
 import {useGetAccessToken} from './use-get-access-token';
 
 export function useSetupAuthTokens() {

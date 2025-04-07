@@ -1,15 +1,7 @@
 import React, {ForwardedRef, forwardRef, useRef} from 'react';
-import {
-  Dimensions,
-  StyleSheet,
-  TextInput,
-  View,
-  TextInputProps,
-  Text,
-  Pressable,
-} from 'react-native';
+import {Dimensions, StyleSheet, TextInput, View, TextInputProps, Text, Pressable} from 'react-native';
 
-import {colors} from '../constatns/colors';
+import {colors} from '@/constatns/colors';
 
 interface InputTextProps extends TextInputProps {
   disabled?: boolean;
@@ -41,12 +33,7 @@ export const InputText = forwardRef<TextInput, InputTextProps>(
 
     return (
       <Pressable onPress={handlePressInput}>
-        <View
-          style={[
-            styles.container,
-            disabled && styles.disabled,
-            touched && Boolean(error) && styles.inputError,
-          ]}>
+        <View style={[styles.container, disabled && styles.disabled, touched && Boolean(error) && styles.inputError]}>
           <TextInput
             ref={mergeRefs(forwardedRef, innerRef)}
             editable={!disabled}
@@ -57,9 +44,7 @@ export const InputText = forwardRef<TextInput, InputTextProps>(
             autoCorrect={false}
             {...props}
           />
-          {touched && Boolean(error) && (
-            <Text style={styles.error}>{error}</Text>
-          )}
+          {touched && Boolean(error) && <Text style={styles.error}>{error}</Text>}
         </View>
       </Pressable>
     );

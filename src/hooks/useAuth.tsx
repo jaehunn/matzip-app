@@ -1,8 +1,8 @@
-import {useSignup} from '../queries/use-signup';
-import {useLogin} from '../queries/use-login';
-import {useGetProfile} from '../queries/use-get-profile';
-import {useLogout} from '../queries/use-logout';
-import {useSetupAuthTokens} from '../queries/use-setup-auth-token';
+import {useSignup} from '@/queries/use-signup';
+import {useLogin} from '@/queries/use-login';
+import {useGetProfile} from '@/queries/use-get-profile';
+import {useLogout} from '@/queries/use-logout';
+import {useSetupAuthTokens} from '@/queries/use-setup-auth-token';
 
 export function useAuth() {
   const signupMutation = useSignup();

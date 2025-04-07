@@ -1,6 +1,6 @@
 import {useQuery} from '@tanstack/react-query';
-import {getProfile} from '../apis/get-profile';
-import {UseQueryCustomOptions} from '../libs/react-query/types';
+import {getProfile} from '@/apis/get-profile';
+import {UseQueryCustomOptions} from '@/libs/react-query/types';
 import {QUERY_KEYS} from './querykeys';
 
 export function useGetProfile(queryOptions?: UseQueryCustomOptions) {

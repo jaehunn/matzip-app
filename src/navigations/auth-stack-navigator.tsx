@@ -1,13 +1,10 @@
 import {StyleSheet} from 'react-native';
 import React from 'react';
-import {
-  createStackNavigator,
-  StackNavigationOptions,
-} from '@react-navigation/stack';
+import {createStackNavigator, StackNavigationOptions} from '@react-navigation/stack';
 
-import AuthScreen from '../screens/auth-screen';
-import LoginScreen from '../screens/login-screen';
-import SignupScreen from '../screens/signup-screen';
+import AuthScreen from '@/screens/auth-screen';
+import LoginScreen from '@/screens/login-screen';
+import SignupScreen from '@/screens/signup-screen';
 
 export const AUTH_NAVIGATIONS = {
   AUTH_SCREEN: 'AuthScreen',
@@ -39,10 +36,7 @@ const stackNavigationOptions: StackNavigationOptions = {
 
 type AuthNavigationKeys = keyof typeof AUTH_NAVIGATIONS;
 
-const screensOptions: Record<
-  (typeof AUTH_NAVIGATIONS)[AuthNavigationKeys],
-  StackNavigationOptions
-> = {
+const screensOptions: Record<(typeof AUTH_NAVIGATIONS)[AuthNavigationKeys], StackNavigationOptions> = {
   [AUTH_NAVIGATIONS.AUTH_SCREEN]: {
     headerShown: false,
   },
