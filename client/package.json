@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android --port=8081",
+    "postinstall": "npx pod-install ios",
+    "android": "react-native run-android --port=8082",
     "ios": "react-native run-ios --port=8082",
     "lint": "eslint .",
-    "start": "react-native start --port=8080",
+    "start": "react-native start --port=8082",
     "test": "jest",
     "format": "prettier --write *.{ts,tsx}"
   },
