@@ -9,3 +9,5 @@ drawer-navigatior, (https://reactnavigation.org/docs/drawer-navigator/)
 /\*_ @see https://reactnative.dev/docs/dimensions _/
 
 ---
+
+https://github.com/react-native-maps/react-native-maps/blob/master/docs/installation.md
