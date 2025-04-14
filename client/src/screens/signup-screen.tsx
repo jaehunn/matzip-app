@@ -55,6 +55,9 @@ function SignupScreen() {
 
         loginMutation.mutate(payload);
       },
+      onError: err => {
+        console.log(err);
+      },
     });
   };
 

@@ -9,7 +9,7 @@ export const STORAGE_KEYS = {
 type StorageKeys = (typeof STORAGE_KEYS)[keyof typeof STORAGE_KEYS];
 
 export async function setKeychain(key: StorageKeys, value: string) {
-  return Keychain.setGenericPassword(key, value);
+  return Keychain.setGenericPassword('user', value, {service: key});
 }
 
 export async function getKeychain(key: StorageKeys) {
@@ -17,7 +17,5 @@ export async function getKeychain(key: StorageKeys) {
 }
 
 export async function resetKeychain(key: StorageKeys) {
-  if (await getKeychain(key)) {
-    return Keychain.resetGenericPassword({service: key});
-  }
+  return Keychain.resetGenericPassword({service: key});
 }
